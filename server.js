@@ -9,11 +9,19 @@ app.get('/', function (req, res) {
     
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+app.get('article-one',function(req,res){
+    res.send('article one is requested and will be srved')
+});
+app.get('article-two',function(req,res){
+    res.send('article two is requested and will be srved');
+});
+    app.get('article-three',function(req,res){
+    res.send('article three is requested and will be srved');
+    
+    });
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
